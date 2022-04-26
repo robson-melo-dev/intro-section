@@ -1,38 +1,184 @@
+@import url(https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap);
+:root{
+  --clrAlmostWhite: hsl(0, 0%, 98%);
+  --clrAlmostBlack: hsl(0, 0%, 8%);
+  --clrMediumGray:hsl(0, 0%, 41%);
+}
+
+
 .App {
+  display: block;
+  margin: 0;
+  background-color: var(--clrAlmostWhite);
+  color: var(--clrAlmostBlack);
+  font-family: 'Epilogue', sans-serif;
+
+  overflow: hidden;
+}
+
+
+
+
+
+/* ########################     NAVBAR    ####################### */
+.navbar{
+  position:relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+
+.topnav {
+  display: block;
+  overflow: hidden;
+  padding: 0px;
+  font-size: 14px;
+}
+
+.topnav li{
+  display: block;
+  float: left;
+  margin: 10px 10px;
+  overflow: hidden;
+  list-style: none;
+}
+
+.topnav li a{
+  text-decoration: none;
+  min-height: 12px;  
+  padding: 5px;
+}
+
+.topnav li a:hover{
+
+}
+
+.topnav .register{
+  border: 1px;
+  border-style: solid;
+  border-radius: 12px;
+  float: right;
+  margin: 10px 40px 10px 20px;
+}
+
+.topnav .topnav-right{
+  float: right;
+  margin: 10px 20px 10px 20px;
+}
+
+
+.topnav .dropdownIcon{
+display:none;
+float:right;
+font-size: 30px;
+}
+
+.navbar p.snap-logo{
+  display: block;
+  float: left;
+  font-weight: 700;
+  font-size: 24px;
+  margin: 10px 40px;
+}
+/* ##################### MOBILE ####################### */
+@media screen and (max-width: 800px){
+
+  nav.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--clrAlmostWhite);
+    width: 100%;
+
+  }
+  .topnav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    float: left;
+    height: 100%;
+    margin: 0;
+    background-color: var(--clrAlmostWhite);
+  }
+  p.snap-logo{
+    display: flex;
+    float: left;
+    text-align: left;
+  }
+
+ .topnav li{
+    display: none;
+  }
+
+  .topnav li.dropdownIcon{
+    margin: 0;
+    text-align: right;
+    display: flex;
+    float: right;
+    }
+
+
+  .topnav.responsive{
+    display:flex;
+    min-width: 30vw;
+    margin-left: auto;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: right;
+    position: fixed;
+    z-index: 1;
+    float: right;
+    right: 0;
+  }
+.topnav.responsive li{
+display: flex;
+
+}
+
+.topnav.responsive li a{
+  display: flex;
+  text-align: right;
+}
+.topnav.responsive .register{
+ border: none;
+ margin: 0;
+}
+
+}
+
+main{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+main img{
+  width: 100%;
+  max-width: 600px;
+  height: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main-section-copy{
+  
+}
+.main-section-copy h1{
+  font-weight: 700;
+  font-size: 24px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.main-section-copy p{
+  font-size: 18px;
+  font-weight: 500;
 }
 
-.App-link {
-  color: #61dafb;
-}
+.learn-more-btn{
+  height: 2.5em;
+  width: 8em;
+  border-radius: 10px;;
+  background-color: var(--clrAlmostBlack);
+  color: var(--clrAlmostWhite);
+  font-size: 18px;
+  font-weight: 500;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
