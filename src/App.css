@@ -39,9 +39,8 @@
 }
 
 .topnav li{
-  display: block;
+  display: flex;
   float: left;
-  margin: 10px 10px;
   overflow: hidden;
   list-style: none;
 }
@@ -61,12 +60,10 @@
   border-style: solid;
   border-radius: 12px;
   float: right;
-  margin: 10px 40px 10px 20px;
 }
 
 .topnav .topnav-right{
   float: right;
-  margin: 10px 20px 10px 20px;
 }
 
 
@@ -82,6 +79,34 @@ font-size: 30px;
   font-weight: 700;
   font-size: 24px;
   margin: 10px 40px;
+}
+.features{
+  display: none;
+}
+.featuresDrop{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.featuresDrop li{
+  margin-top: 20px;
+  float: right;
+  display: block;
+}
+
+.companies{
+  display:none;
+}
+
+.companiesDrop{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.companiesDrop li{
+  position: relative;
+  margin-top: 20px;
+  display: block;
 }
 /* ##################### MOBILE ####################### */
 @media screen and (max-width: 800px){
@@ -111,6 +136,7 @@ font-size: 30px;
 
  .topnav li{
     display: none;
+    margin: 10px 40px;
   }
 
   .topnav li.dropdownIcon{
@@ -144,27 +170,72 @@ display: flex;
 }
 .topnav.responsive .register{
  border: none;
- margin: 0;
+ margin: 10px 40px;
 }
 
+
 }
+
+
 
 main{
   text-align: center;
 }
 
-main img{
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-}
+
 
 .main-section-copy{
+    display: block;
+    width: 100%;
+}
+
+.main-section-copy .hero-img{
+  display: flex;
+  float: right;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  width: 50%;
+  height: auto;
+}
+@media screen and (max-width: 800px) {
+  .main-section-copy .hero-img{
+    display: block;
+    float: left;
+    width: 100%;
+    height: auto;
+  }
+  .main-section-copy article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+  }
+  .main-section-copy article h1{
+    height: auto;
+    font-size: 40px;
+    font-weight: 700;
+  }
+  
+  
   
 }
+article{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 45%;
+  align-content: center;
+  justify-content: center;
+}
+
 .main-section-copy h1{
+  height: auto;
+  font-size: 70px;
   font-weight: 700;
-  font-size: 24px;
 }
 
 .main-section-copy p{
