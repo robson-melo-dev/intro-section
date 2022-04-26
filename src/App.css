@@ -32,15 +32,14 @@
 
 
 .topnav {
-  display: block;
+  display: flex;
+  position: relative;
+  flex-direction: row;
   overflow: hidden;
-  padding: 0px;
   font-size: 14px;
 }
 
 .topnav li{
-  display: flex;
-  float: left;
   overflow: hidden;
   list-style: none;
 }
@@ -48,7 +47,7 @@
 .topnav li a{
   text-decoration: none;
   min-height: 12px;  
-  padding: 5px;
+  padding: 20px;
 }
 
 .topnav li a:hover{
@@ -81,54 +80,63 @@ font-size: 30px;
   margin: 10px 40px;
 }
 .features{
-  display: none;
-}
-.featuresDrop{
+   display: none;
   position: relative;
-  display: flex;
-  flex-direction: column;
 }
+
+
+.featuresDrop{
+  background-color: var(--clrAlmostWhite);
+  padding-inline-start: 0px;
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 20px;
+  z-index: 1;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+}
+  
 .featuresDrop li{
-  margin-top: 20px;
-  float: right;
-  display: block;
+padding: 10px;
 }
 
 .companies{
   display:none;
+  position: relative;
 }
 
 .companiesDrop{
-  position: relative;
+  background-color: var(--clrAlmostWhite);
   display: flex;
+  position: fixed;
   flex-direction: column;
+  align-items: flex-end;
+  border-radius: 20px;
+  z-index: 1;
+  padding-inline-start: 0px;
 }
 .companiesDrop li{
-  position: relative;
   margin-top: 20px;
-  display: block;
 }
 /* ##################### MOBILE ####################### */
 @media screen and (max-width: 800px){
 
-  nav.navbar {
+  .navbar {
+    position: relative;
     display: flex;
     justify-content: space-between;
     background-color: var(--clrAlmostWhite);
     width: 100%;
+    justify-content: flex-end;
 
   }
   .topnav{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-end;
-    float: left;
-    height: 100%;
-    margin: 0;
-    background-color: var(--clrAlmostWhite);
+   
   }
-  p.snap-logo{
+  .navbar p.snap-logo{
     display: flex;
     float: left;
     text-align: left;
@@ -148,30 +156,56 @@ font-size: 30px;
 
 
   .topnav.responsive{
-    display:flex;
-    min-width: 30vw;
-    margin-left: auto;
+    position: fixed;
+    display: flex;
     flex-direction: column;
     align-items: flex-end;
-    justify-content: right;
-    position: fixed;
-    z-index: 1;
     float: right;
-    right: 0;
+    height: 100%;
+    width: 50vw;
+    margin: 0;
+    padding-inline-start: 0;
+    background-color: var(--clrAlmostWhite);
+    font-size: 12px;
+
   }
 .topnav.responsive li{
-display: flex;
+    display: block;
+
 
 }
 
 .topnav.responsive li a{
-  display: flex;
-  text-align: right;
+
 }
 .topnav.responsive .register{
  border: none;
  margin: 10px 40px;
 }
+.topnav.responsive .featuresDrop{
+  background-color: var(--clrAlmostWhite);
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  align-items: flex-end;
+  border-radius: 20px;
+  z-index: 1;
+  padding-inline-start: 0px;
+  min-width: fit-content;
+}
+
+.topnav.responsive .companiesDrop{
+  background-color: var(--clrAlmostWhite);
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  align-items: flex-end;
+  border-radius: 20px;
+  z-index: 1;
+  padding-inline-start: 0px;
+  min-width: fit-content;
+}
+
 
 
 }

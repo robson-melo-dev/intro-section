@@ -40,10 +40,12 @@ function App() {
         <ul className="topnav" id="dropdownClick">          
           <li><a href="javascript:void(0);" onClick={dropFeatures}>Features</a>
           <ul id="features" className="features">
+            <div className="featuresContainer">
             <li><a href="#">Todo List</a></li>
             <li><a href="#">Calendar</a></li>
             <li><a href="#">Reminders</a></li>
             <li><a href="#">Planning</a></li>
+            </div>
           </ul>
           </li>
           <li><a href="javascript:void(0);" onClick={dropCompanies}>Company</a>
@@ -54,9 +56,9 @@ function App() {
           </ul>          
           </li>
           <li><a href="#">Carreers</a></li>
-          <li><a href="#">About</a></li>          
-          <li className="register"><a href="#">Register</a></li>
-          <li className="topnav-right"><a href="#">Login</a></li>          
+          <li><a href="#">About</a></li>       
+          <li className="topnav-right"><a href="#">Login</a></li>       
+          <li className="register"><a href="#">Register</a></li>      
           <li className="dropdownIcon"><a href="javascript:void(0);" onClick={dropdownMenu}>&#9776;</a></li>
           
         </ul>
