@@ -15,6 +15,10 @@
 
   overflow: hidden;
 }
+a:hover, a:active, a:checked, a:link{
+  text-decoration: none;
+  color: inherit;
+}
 
 
 
@@ -35,8 +39,10 @@
   display: flex;
   position: relative;
   flex-direction: row;
+  float:left;
   overflow: hidden;
   font-size: 14px;
+  margin-right: 40px;
 }
 
 .topnav li{
@@ -45,17 +51,14 @@
 }
 
 .topnav li a{
-  text-decoration: none;
+  color: var(--clrAlmostBlack);
   min-height: 12px;  
   padding: 20px;
 }
 
-.topnav li a:hover{
-
-}
 
 .topnav .register{
-  border: 1px;
+  border: 2px;
   border-style: solid;
   border-radius: 12px;
   float: right;
@@ -133,9 +136,7 @@ padding: 10px;
     justify-content: flex-end;
 
   }
-  .topnav{
-   
-  }
+
   .navbar p.snap-logo{
     display: flex;
     float: left;
@@ -145,6 +146,9 @@ padding: 10px;
  .topnav li{
     display: none;
     margin: 10px 40px;
+  }
+  .topnav li a{
+    padding: 40px;
   }
 
   .topnav li.dropdownIcon{
@@ -175,9 +179,7 @@ padding: 10px;
 
 }
 
-.topnav.responsive li a{
 
-}
 .topnav.responsive .register{
  border: none;
  margin: 10px 40px;
@@ -231,11 +233,11 @@ main{
   max-width: 600px;
   width: 50%;
   height: auto;
+  margin-right: 40px;
 }
 @media screen and (max-width: 800px) {
   .main-section-copy .hero-img{
-    display: block;
-    float: left;
+    display: flex;
     width: 100%;
     height: auto;
   }
@@ -259,20 +261,24 @@ main{
 article{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   height: 100%;
   width: 45%;
   align-content: center;
   justify-content: center;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 .main-section-copy h1{
   height: auto;
+  text-align: left;
   font-size: 70px;
   font-weight: 700;
 }
 
 .main-section-copy p{
+  text-align: left;
   font-size: 18px;
   font-weight: 500;
 }
@@ -286,4 +292,8 @@ article{
   font-size: 18px;
   font-weight: 500;
 
+}
+.client{
+  height: 20px;
+  margin: 20px 10px 10px 10px;
 }

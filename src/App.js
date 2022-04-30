@@ -1,6 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
 import hero from './images/image-hero-mobile.png';
+import databiz from './images/client-databiz.svg';
+import audiophile from './images/client-audiophile.svg';
+import meet from './images/client-meet.svg';
+import maker from './images/client-maker.svg';
+import dwnarrow from './images/icon-arrow-down.svg';
+import calendar from './images/icon-calendar.svg';
+import planning from './images/icon-planning.svg';
+import reminders from './images/icon-reminders.svg';
+import todo from './images/icon-todo.svg';
+
 
  function dropdownMenu(){
   var id = document.getElementById("dropdownClick");
@@ -33,22 +43,18 @@ function dropCompanies(){
 function App() {
   return (
     <div className="App">
-      <div className="grayBackground">
-      </div>
       <nav className="navbar"> {/* Top Navbar */}
       <p className="snap-logo">snap</p>
         <ul className="topnav" id="dropdownClick">          
-          <li><a href="javascript:void(0);" onClick={dropFeatures}>Features</a>
+          <li><a href="javascript:void(0);" onClick={dropFeatures}>Features	<img src={dwnarrow} alt=""/></a>
           <ul id="features" className="features">
-            <div className="featuresContainer">
-            <li><a href="#">Todo List</a></li>
-            <li><a href="#">Calendar</a></li>
-            <li><a href="#">Reminders</a></li>
-            <li><a href="#">Planning</a></li>
-            </div>
+            <li><a href="#"><img src={todo} alt=""/> Todo List </a></li>
+            <li><a href="#"><img src={calendar} alt=""/> Calendar </a></li>
+            <li><a href="#"><img src={reminders} alt=""/> Reminders </a></li>
+            <li><a href="#"><img src={planning} alt=""/> Planning </a></li>
           </ul>
           </li>
-          <li><a href="javascript:void(0);" onClick={dropCompanies}>Company</a>
+          <li><a href="javascript:void(0);" onClick={dropCompanies}>Company	<img src={dwnarrow} alt=""/></a>
           <ul id="companies" className="companies">
             <li><a href="#">History</a></li>
             <li><a href="#">Our Team</a></li>
@@ -73,8 +79,13 @@ function App() {
             <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.
             </p>
             <button className="learn-more-btn">Learn More</button> 
-            Some images from footer.
-           </article>
+            </article>
+            
+            <img className="client" src={databiz} alt="" />
+            <img className="client" src={audiophile} alt="" />
+            <img className="client" src={meet} alt="" />
+            <img className="client" src={maker} alt="" />
+            
         </section>
         
       </main>
